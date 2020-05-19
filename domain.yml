@@ -1,0 +1,176 @@
+
+intents:
+- greet
+- health_about
+- vehicle_about
+- vehicle_timeperiod
+- health_timeperiod
+- vehicle_benefits
+- health_benefits
+- affirm
+- health_insuranceclaim
+- vehicle_insuranceclaim
+- generalinfo
+- health_sum_assured
+- vehicle_sum_assured
+- health_sublimit
+- vehicle_sublimit
+- insurance_renewal
+- health_coverage
+- vehicle_coverage
+
+
+slots:
+  HealthInsurance:
+    type: categorical
+    values:
+        - health insurance
+        - abc health insurance
+  VehicleInsurance:
+    type: categorical
+    values:
+        - vehicle insurance
+        - abc vehicle insurance         
+  Benefits:
+    type: categorical
+    values:
+        - benefits
+        - tax benefits
+        - regular benefits
+        - complementary benefits
+  TimePeriod:
+    type: categorical
+    values:
+        - timeperiod
+        - duration
+        - long
+        - validity
+  Documents:
+    type: categorical
+    values:
+        - documents
+        - factors
+  Link:
+    type: categorical
+    values:
+        - link
+  Credentials:
+    type: categorical
+    values:
+        - password
+        - username
+        - login
+ 
+  InsuranceSum:
+    type: categorical
+    values:
+        - money
+        - amount
+        - insurance sum
+  SubLimit:
+    type: categorical
+    values:
+        - sub limit       
+  Renew:
+    type: categorical
+    values:
+        - renew
+        - renewing 
+  Policy:
+    type: categorical
+    values:
+        - policy
+        - insurance policy
+  Coverage:
+    type: categorical
+    values:
+        - coverage
+        - insurance coverage        
+entities:
+- HealthInsurance
+- VehicleInsurance
+- Benefits
+- TimePeriod
+- Documents
+- Link
+- Credentials
+- InsuranceSum
+- SubLimit
+- Renew
+- Policy
+- Coverage
+actions:
+- utter_greet
+- utter_affirm
+- utter_action_health_about
+- utter_action_vehicle_about
+- utter_action_vehicle_benefits
+- utter_action_health_benefits
+- utter_action_vehicle_timeperiod
+- utter_action_health_timeperiod
+- utter_action_health_document
+- utter_action_vehicle_document
+- utter_action_health_link
+- utter_action_vehicle_link
+- utter_action_credentials
+- utter_action_health_insurancesum
+- utter_action_vehicle_insurancesum
+- utter_action_health_sublimit
+- utter_action_vehicle_sublimit
+- utter_action_insurance_renew
+- utter_action_health_policy
+- utter_action_vehicle_policy
+- utter_action_health_coverage
+- utter_action_vehicle_coverage
+- action_default
+- __main__.ApiAction
+
+templates:
+  utter_greet:
+  - text: "Welcome"
+  utter_action_health_about:
+  - text: "It is health insurance, which can be covered for all medical day-care treatments such as skin treatment and Lasik surgery. The policy covered for 5 yrs. The Free look period is 15 days, the grace period and waiting period is 30 days."
+  utter_action_vehicle_about:
+  - text: "It is vehicle insurance, which can be covered for all own damage treatments such as fire, theft, accident. The policy covered for 5 yrs. The Free look period is 15 days, the grace period and waiting period is 30 days."
+  utter_action_vehicle_benefits:
+  - text: "a. Renewal Benefits :rn i. Cumulative Bonus (Additional Sum Insured) - An Additional Sum Insured of 10% of Annual Sum Insured provided on each renewal for every claim-free year up to a maximum of 50%.rnii. Complimentary vehicle service Coupons: One coupon per individual policy and two coupons per Floater policy will be offered.rn b. Tax Benefits: Income tax exemption for 1 lakh rupees"
+  utter_action_health_benefits:
+  - text: "a. Renewal Benefits :i. a) Cumulative Bonus (Additional Sum Insured) - An Additional Sum Insured of 10% of Annual Sum Insured provided on each renewal for every claim-free year up to a maximum of 50% ii. b) Complementary Health Check-Up Coupons: One coupon per individual policy and two coupons per Floater policy will be offered. b. Tax Benefits: Income tax exemption for 1 lakh rupees "
+  utter_action_vehicle_timeperiod:
+  - text: "The policy covered for 5 yrs. The Free look period is 15 days, the grace period and waiting period is 30 days."
+  utter_action_health_timeperiod:
+  - text: "The policy covered for 5 yrs. The Free look period is 15 days, the grace period and waiting period is 30 days."
+  utter_action_health_document:
+  - text: "a. Medical bills b. Policy copy"
+  utter_action_vehicle_document:
+  - text: "a. Driving License copy. b. Original FIR copy c. RC copy of the vehicle with all original keys."  
+  action_default:
+  - text: "Default"
+  utter_action_health_link:
+  - text: "https://www.abc.com/health"  
+  utter_action_vehicle_link:
+  - text: "https://www.abc.com/vehicle"
+  utter_action_credentials:
+  - text: "https://www.abc.com/vehicle/passwordreset"
+  utter_action_health_insurancesum:
+  - text: "Test Health Insurance Sum"
+  utter_action_vehicle_insurancesum:
+  - text: "Test Vehicle Insurance Sum"
+  utter_action_health_sublimit:
+  - text: "Test Health Sub Limit"  
+  utter_action_vehicle_sublimit: 
+  - text: "Test Vehicle Sub Limit"
+  utter_action_insurance_renew:
+  - text: "Test Insurance Revenue"
+  utter_action_health_coverage:
+  - text: "Test health Coverage"  
+  utter_action_vehicle_coverage:
+  - text: "Test vehicle coverage"  
+  utter_action_health_policy:
+  - text: "Test Health Policy"  
+  utter_action_vehicle_policy:
+  - text: "Test Vehicle Policy"    
+  utter_affirm:
+  - text: "You're welcome"
+  
+  
